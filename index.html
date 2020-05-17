@@ -1,1 +1,104 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RasPhilCo</title>
+  <style>
+    body {
+      background: url('imagedoc-darknoise.png');
+    }
+
+    #container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #map {
+      width: 975px;
+      height: 552px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    #worldmap {
+      z-index: 0;
+      width: 975px;
+    }
+
+    #fjord {
+      position: absolute;
+      top: 15%;
+      left: 47%;
+      z-index: 10;
+    }
+
+    #gitgazette {
+      position: absolute;
+      top: 27%;
+      left: 23%;
+      z-index: 10;
+    }
+
+    #leif {
+      position: absolute;
+      top: 22%;
+      left: 29%;
+      z-index: 10;
+    }
+
+    #keycomb {
+      position: absolute;
+      top: 30%;
+      left: 10%;
+      z-index: 10;
+    }
+
+    #pizpizviz {
+      position: absolute;
+      top: 41%;
+      left: 24%;
+      z-index: 10;
+    }
+
+    #rabbit-hole {
+      position: absolute;
+      top: 20%;
+      left: 44%;
+      z-index: 10;
+    }
+
+    .x {
+      font-size: 1em;
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="map">
+      <p id="fjord" class="x" onclick="goto('fjord')">X</p>
+      <p id="gitgazette" class="x" onclick="goto('git-gazette-vue')">X</p>
+      <p id="leif" class="x" onclick="goto('leif')">X</p>
+      <p id="keycomb" class="x" onclick="goto('keycomb')">X</p>
+      <p id="pizpizviz" class="x" onclick="goto('pizpizviz')">X</p>
+      <p id="rabbit-hole" class="x" onclick="goto('rabbit-hole')">X</p>
+      <img id="worldmap" src="worldmap.jpeg" />
+    </div>
+  </div>
+
+  <script>
+    function goto(repo) {
+      const user = repo === 'keycomb' ? repo : 'rasphilco'
+      window.open(`https://github.com/${user}/${repo}`)
+    }
+  </script>
+</body>
+</html>
