@@ -32,6 +32,13 @@
       width: 975px;
     }
 
+    #easy-money {
+      position: absolute;
+      top: 23%;
+      left: 47%;
+      z-index: 10;
+    }
+
     #fjord {
       position: absolute;
       top: 15%;
@@ -84,6 +91,7 @@
 <body>
   <div id="container">
     <div id="map">
+      <p id="easy-money" class="x" onclick="goto('easy-money')">X</p>
       <p id="fjord" class="x" onclick="goto('fjord')">X</p>
       <p id="gitgazette" class="x" onclick="goto('git-gazette-vue')">X</p>
       <p id="leif" class="x" onclick="goto('leif')">X</p>
